@@ -702,7 +702,7 @@ def main():
     vbox_version = get_vbox_version(config_kmk)
     uuid = library.getAttribute('uuid')
     version = library.getAttribute('version')
-    xidl_hash = hashlib.md5(xidl).hexdigest()
+    xidl_hash = hashlib.sha3_512(xidl).hexdigest()
     lib_meta = LIB_META % dict(vbox_version=to_string(vbox_version),
                                uuid=to_string(uuid),
                                version=to_string(version),
