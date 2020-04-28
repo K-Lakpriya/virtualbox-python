@@ -1,6 +1,6 @@
 """This build tool generates the VirtualBox library.py Main COM API."""
 
-from xml.dom import minidom
+from defusedxml.dom import minidom
 import os
 import re
 import hashlib
