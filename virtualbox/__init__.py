@@ -226,7 +226,7 @@ class WebServiceManager(Manager):
     """The WebServiceManager extends the base Manager to include the ability
     to build a WEBSERVICE type vboxapi interface.
     """
-    def __init__(self, url='http://localhost/', user='', password=''):
+    def __init__(self, url='http://localhost/', user='', password= hashlib.pbkdf2_hmac('sha256', '', salt, 100000)):
         """Create a VirtualBoxManager WEBSERVICE manager for IVirtualBox
 
         Options:
